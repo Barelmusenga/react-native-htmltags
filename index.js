@@ -1,87 +1,163 @@
-import React, { useState } from "react";
-import {
-  StyleSheet,
-  Text,
-  View,
-  Image,
-  ScrollView,
-  SafeAreaView,
-} from "react-native";
-import * as Font from "expo-font";
-import { AppLoading } from "expo";
-import CardWithRowBottom from "./elements/CardWithRowBottom";
-import { BodyText, H1 } from "./tags/HtmlTags";
-import Well from "./elements/Well";
-import Card from "./elements/Card";
-import colors from "./constants/colors";
+import React from "react";
+import { View, Text, StyleSheet } from "react-native";
 
-const fetchFonts = () => {
-  return Font.loadAsync({
-    "open-sans": require("./assets/fonts/OpenSans-Regular.ttf"),
-    "open-sans-bold": require("./assets/fonts/OpenSans-Bold.ttf"),
-  });
+export const H1 = ({ alignCenter, alignRight, ...props }) => {
+  return (
+    <View>
+      {alignCenter ? (
+        <Text style={{ ...styles.textCenter, ...styles.h1, ...props.style }}>
+          {props.children}
+        </Text>
+      ) : (
+        <View>
+          {alignRight ? (
+            <Text style={{ ...styles.textRight, ...styles.h1, ...props.style }}>
+              {props.children}
+            </Text>
+          ) : (
+            <Text style={{ ...styles.h1, ...props.style }}>
+              {props.children}
+            </Text>
+          )}
+        </View>
+      )}
+    </View>
+  );
 };
 
-export default function App() {
-  const [fontLoaded, setFontLoaded] = useState(false);
-
-  if (!fontLoaded) {
-    return (
-      <AppLoading
-        startAsync={fetchFonts}
-        onFinish={() => setFontLoaded(true)}
-        onError={(err) => console.log(err)}
-      />
-    );
-  }
-
-  const image =
-    "https://cdn.pixabay.com/photo/2018/07/11/21/51/toast-3532016_1280.jpg";
-
+export const H2 = ({ alignCenter, alignRight, ...props }) => {
   return (
-    <SafeAreaView style={styles.container}>
-      <View style={styles.container}>
-        <ScrollView>
-          <CardWithRowBottom title="Texting Card" imageUrl={image}>
-            <BodyText>Texting Test</BodyText>
-            <BodyText>Texting Test</BodyText>
-            <BodyText>Texting Test</BodyText>
-          </CardWithRowBottom>
-
-          <CardWithRowBottom title="Texting Card" imageUrl={image} titleBottom>
-            <BodyText>Texting Test</BodyText>
-            <BodyText>Texting Test</BodyText>
-            <BodyText>Texting Test</BodyText>
-          </CardWithRowBottom>
-
-          <Card imageUrl={image} imageHeight={200} style={styles.card}>
-            <H1>Barel Musenga</H1>
-            <BodyText>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat
-            </BodyText>
-          </Card>
-        </ScrollView>
-      </View>
-    </SafeAreaView>
+    <View>
+      {alignCenter ? (
+        <Text style={{ ...styles.textCenter, ...styles.h2, ...props.style }}>
+          {props.children}
+        </Text>
+      ) : (
+        <View>
+          {alignRight ? (
+            <Text style={{ ...styles.textRight, ...styles.h2, ...props.style }}>
+              {props.children}
+            </Text>
+          ) : (
+            <Text style={{ ...styles.h2, ...props.style }}>
+              {props.children}
+            </Text>
+          )}
+        </View>
+      )}
+    </View>
   );
-}
+};
+
+export const H3 = ({ alignCenter, alignRight, ...props }) => {
+  return (
+    <View>
+      {alignCenter ? (
+        <Text style={{ ...styles.textCenter, ...styles.h3, ...props.style }}>
+          {props.children}
+        </Text>
+      ) : (
+        <View>
+          {alignRight ? (
+            <Text style={{ ...styles.textRight, ...styles.h3, ...props.style }}>
+              {props.children}
+            </Text>
+          ) : (
+            <Text style={{ ...styles.h3, ...props.style }}>
+              {props.children}
+            </Text>
+          )}
+        </View>
+      )}
+    </View>
+  );
+};
+
+export const Title = ({ alignCenter, alignRight, ...props }) => {
+  return (
+    <View>
+      {alignCenter ? (
+        <Text style={{ ...styles.textCenter, ...styles.title, ...props.style }}>
+          {props.children}
+        </Text>
+      ) : (
+        <Text style={{ ...styles.title, ...props.style }}>
+          {props.children}
+        </Text>
+      )}
+    </View>
+  );
+};
+
+export const BodyText = ({ alignCenter, alignRight, justify, ...props }) => {
+  return (
+    <View>
+      {alignCenter ? (
+        <Text style={{ ...styles.textCenter, ...styles.text, ...props.style }}>
+          {props.children}
+        </Text>
+      ) : (
+        <View>
+          {alignRight ? (
+            <Text
+              style={{ ...styles.textRight, ...styles.text, ...props.style }}
+            >
+              {props.children}
+            </Text>
+          ) : (
+            <View>
+              {justify ? (
+                <Text
+                  style={{
+                    ...styles.textJustify,
+                    ...styles.text,
+                    ...props.style,
+                  }}
+                >
+                  {props.children}
+                </Text>
+              ) : (
+                <Text style={{ ...styles.text, ...props.style }}>
+                  {props.children}
+                </Text>
+              )}
+            </View>
+          )}
+        </View>
+      )}
+    </View>
+  );
+};
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
+  h1: {
+    fontSize: 25,
+    marginVertical: 10,
+    fontWeight: "bold",
   },
-
-  imageStyle: {
-    width: "100%",
-    height: 200,
+  h2: {
+    fontSize: 20,
+    marginVertical: 10,
+    fontWeight: "bold",
   },
-  card: {
-    backgroundColor: colors.lightGray,
+  h3: {
+    fontSize: 16,
+    marginVertical: 10,
+    fontWeight: "bold",
+  },
+  title: {
+    fontSize: 20,
+    marginVertical: 10,
+    fontWeight: "bold",
+  },
+  text: {},
+  textCenter: {
+    textAlign: "center",
+  },
+  textRight: {
+    textAlign: "right",
+  },
+  textJustify: {
+    textAlign: "justify",
   },
 });

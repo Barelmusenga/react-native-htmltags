@@ -1,14 +1,20 @@
 import React from "react";
 import {
   View,
+  Text,
   Image,
-  StyleSheet,
+  ImageBackground,
   TouchableOpacity,
   TouchableNativeFeedback,
+  StyleSheet,
   Platform,
 } from "react-native";
-import Well from "./Well";
-import colors from "../constants/colors";
+
+export const Well = (props) => {
+  return (
+    <View style={{ ...styles.well, ...props.style }}>{props.children}</View>
+  );
+};
 
 export const Card = ({ children, imageUrl, onPress, imageHeight, style }) => {
   let TouchableComponent = TouchableOpacity;
@@ -84,12 +90,6 @@ export const CardWithRowBottom = ({
   );
 };
 
-export const Well = (props) => {
-  return (
-    <View style={{ ...styles.well, ...props.style }}>{props.children}</View>
-  );
-};
-
 export const Button = ({ onPress, style, title, icon, alignIconRight }) => {
   let ButtonComponent = TouchableOpacity;
 
@@ -132,7 +132,7 @@ const styles = StyleSheet.create({
   },
   imageStyle: {
     height: 150,
-    backgroundColor: colors.lightGray,
+    backgroundColor: "#f0f0f0",
   },
   cardWell: {
     borderRadius: 0,
@@ -140,7 +140,7 @@ const styles = StyleSheet.create({
   card: {
     height: 250,
     width: "100%",
-    backgroundColor: Colors.lightGrey,
+    backgroundColor: "#b4b4b4",
     marginVertical: 10,
     overflow: "hidden",
   },
@@ -171,17 +171,17 @@ const styles = StyleSheet.create({
   },
   cardTitle: {
     fontSize: 20,
-    color: Colors.default,
+    color: "#ffff",
     textAlign: "center",
-    fontFamily: "open-sans-bold",
+    fontWeight: "bold",
   },
   well: {
-    shadowColor: Colors.black,
+    shadowColor: "#000",
     shadowOffset: { width: 0, height: 2 },
     shadowRadius: 6,
     shadowOpacity: 0.26,
     elevation: 5,
-    backgroundColor: Colors.default,
+    backgroundColor: "#ffff",
     padding: 20,
     borderRadius: 10,
   },
@@ -190,7 +190,7 @@ const styles = StyleSheet.create({
     overflow: "hidden",
   },
   button: {
-    backgroundColor: colors.secondary,
+    backgroundColor: "#0000ff",
     paddingVertical: 15,
     paddingHorizontal: 30,
     borderRadius: 25,
@@ -203,8 +203,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   buttonText: {
-    color: colors.white,
-    fontFamily: "open-sans",
+    color: "#ffff",
   },
 
   buttonIcon: {

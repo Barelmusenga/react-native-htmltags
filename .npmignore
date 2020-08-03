@@ -15,7 +15,6 @@ npm-debug.log
 
 # Dependency directory
 node_modules
-constants
 
 # Runtime data
 tmp
