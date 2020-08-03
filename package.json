@@ -1,23 +1,17 @@
 {
-  "main": "node_modules/expo/AppEntry.js",
-  "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web",
-    "eject": "expo eject"
+  "name": "react-native-htmltags",
+  "description": "This library helps developers have and use html-like elements such as H1, H2, H3 and BodyText which they can also style in their own way.",
+  "version": "1.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Barelmusenga/react-native-htmltags.git"
   },
-  "dependencies": {
-    "expo": "~38.0.8",
-    "expo-status-bar": "^1.0.2",
-    "react": "~16.11.0",
-    "react-dom": "~16.11.0",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-38.0.2.tar.gz",
-    "react-native-web": "~0.11.7"
+  "keywords": [],
+  "author": "Barel Musenga",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Barelmusenga/react-native-htmltags/issues"
   },
-  "devDependencies": {
-    "@babel/core": "^7.8.6",
-    "babel-preset-expo": "~8.1.0"
-  },
-  "private": true
+  "homepage": "https://github.com/Barelmusenga/react-native-htmltags#readme",
+  "main": "index.js"
 }
