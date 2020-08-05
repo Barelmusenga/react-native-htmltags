@@ -1,0 +1,92 @@
+.home-page {
+  font-family: "Raleway", sans-serif;
+  font-size: 17px;
+  .jumbotron {
+    display: grid;
+    padding: 75px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(to top right, #6699ff 0%, #3333cc 100%);
+    color: #fff;
+    border-radius: 0;
+    font-family: "Mulish", sans-serif;
+
+    .title {
+      font-weight: 900;
+      font-size: 70px;
+      color: "#fff";
+    }
+
+    .sub-title {
+      margin-top: 25px;
+      font-weight: 600;
+    }
+
+    .btn-links {
+      margin-top: 25px;
+
+      .btn.btn-outline-light {
+        .nav-item.nav-link {
+          color: #fff;
+          &:hover {
+            color: #3333cc;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+  .intro {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  h3 {
+    font-weight: 600;
+  }
+  .snippet {
+    margin-top: 25px;
+  }
+  .code-snippet {
+    display: grid;
+    background-color: black;
+    color: burlywood;
+    padding: 15px;
+    border-radius: 10px;
+    align-items: center;
+  }
+
+  .about {
+    background: linear-gradient(to right, #ffffcc 0%, #666699 100%);
+    padding: 50px;
+
+    .demo-part {
+      display: grid;
+      background-color: black;
+      color: burlywood;
+      padding: 15px;
+      border-radius: 10px;
+      align-items: center;
+    }
+
+    .code-shot {
+      width: 100%;
+    }
+  }
+  .card-bottom {
+    padding: 50px;
+    background-color: rgb(27, 25, 25);
+
+    .card-bottom-text {
+      padding: 30px;
+      background-color: burlywood;
+    }
+  }
+
+  .card-demo {
+    padding: 50px;
+    background: linear-gradient(to left, #ffffcc 0%, #666699 100%);
+  }
+}
