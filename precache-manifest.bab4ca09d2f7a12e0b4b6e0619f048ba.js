@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c9f8a0aba9b3575719cc51688de17c05",
+    "revision": "53e3f785950578f94e13f67b3ff367d3",
     "url": "/react-native-htmltags/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-native-htmltags/static/css/2.ed439b8d.chunk.css"
   },
   {
-    "revision": "aced35a66a63beae0a44",
+    "revision": "e46b61b1b01bacd51644",
     "url": "/react-native-htmltags/static/css/main.a4e22caa.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-native-htmltags/static/js/2.41ccbfd2.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "aced35a66a63beae0a44",
-    "url": "/react-native-htmltags/static/js/main.9b0d7115.chunk.js"
+    "revision": "e46b61b1b01bacd51644",
+    "url": "/react-native-htmltags/static/js/main.cc0c553d.chunk.js"
   },
   {
     "revision": "63846434e310683767ca",
