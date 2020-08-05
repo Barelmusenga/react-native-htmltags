@@ -12,12 +12,12 @@ const HomePage = () => {
         </h3>
         <div className="btn-links d-flex justify-content-between">
           <div className="btn btn-outline-light btn-lg">
-            <Link to="/documentation" className="nav-item nav-link">
+            <Link to="/" className="nav-item nav-link">
               Get Started
             </Link>
           </div>
           <div className="btn btn-outline-light btn-lg">
-            <Link to="/documentation" className="nav-item nav-link">
+            <Link to="/" className="nav-item nav-link">
               Documentation
             </Link>
           </div>
@@ -63,7 +63,7 @@ const HomePage = () => {
       </div>
       <div className="about">
         <div className="container">
-          <h3>Write HTML is React Native</h3>
+          <h3>Code React Native as Html</h3>
           <div className="row">
             <div className="col-md-6">
               <p>

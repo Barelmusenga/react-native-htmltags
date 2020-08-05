@@ -7,6 +7,7 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container">
         <Link className="navbar-brand" to="/">
+          <img src="/logo192.png" width="50" height="40" alt="react-logo" />
           React Native Html Tags
         </Link>
         <button
@@ -24,13 +25,13 @@ const Navbar = () => {
           className="collapse navbar-collapse justify-content-end"
           id="navbarNavAltMarkup"
         >
-          <NavLink className="nav-item nav-link" to="/documentation">
+          <NavLink className="nav-item nav-link" to="/">
             Documentation
           </NavLink>
           <NavLink className="nav-item nav-link" to="/github" target="_blank">
             GitHub
           </NavLink>
-          <NavLink className="nav-item nav-link" to="/blog">
+          <NavLink className="nav-item nav-link" to="/">
             Blog
           </NavLink>
         </div>
